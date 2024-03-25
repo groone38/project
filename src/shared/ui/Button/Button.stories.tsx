@@ -1,15 +1,15 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
-import { Button, ThemeButton } from "./Button";
-import "../../../app/styles/index.scss";
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
+import { Button, ThemeButton } from './Button';
+import '../../../app/styles/index.scss';
 
 const meta = {
-  title: "shared/Button",
+  title: 'shared/Button',
   component: Button,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   //   argTypes: {
   //     backgroundColor: { control: "color" },
   //   },
@@ -20,13 +20,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: { children: "Text" },
+  args: { children: 'Text' },
 };
 
 export const Clear: Story = {
-  args: { children: "Text", theme: ThemeButton.CLEAR },
+  args: { children: 'Text', theme: ThemeButton.CLEAR },
 };
 
 export const Outline: Story = {
-  args: { children: "Text", theme: ThemeButton.OUTLINE },
+  args: { children: 'Text', theme: ThemeButton.OUTLINE },
 };

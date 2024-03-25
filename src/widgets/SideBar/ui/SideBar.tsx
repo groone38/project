@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { useState } from 'react';
 import cls from './SideBar.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -22,6 +23,7 @@ export const SideBar = ({ className }: ISideBar): JSX.Element => {
         className,
       ])}
     >
+     
       <Button data-testid="sidebar-toggle" onClick={onToggle}>
         toggle
       </Button>

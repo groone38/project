@@ -1,10 +1,10 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
-import cls from "./Button.module.scss";
-import { classNames } from "shared/lib/classNames/classNames";
+import { ButtonHTMLAttributes, ReactNode } from 'react';
+import cls from './Button.module.scss';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 export enum ThemeButton {
-  CLEAR = "clear",
-  OUTLINE = "outline",
+  CLEAR = 'clear',
+  OUTLINE = 'outline',
 }
 
 interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {

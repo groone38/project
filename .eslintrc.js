@@ -8,7 +8,7 @@ module.exports = {
     "airbnb-typescript",
     "plugin:react/recommended",
     "plugin:i18next/recommended",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
   ],
   overrides: [
     {

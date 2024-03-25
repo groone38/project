@@ -1,15 +1,15 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import "../../../app/styles/index.scss";
-import { NavBar } from "./NavBar";
-import { BrowserRouter } from "react-router-dom";
+import type { Meta, StoryObj } from '@storybook/react';
+import '../../../app/styles/index.scss';
+import { NavBar } from './NavBar';
+import { BrowserRouter } from 'react-router-dom';
 
 const meta = {
-  title: "widgets/NavBar",
+  title: 'widgets/NavBar',
   component: NavBar,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   //   argTypes: {
   //     backgroundColor: { control: "color" },
   //   },

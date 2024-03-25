@@ -14,5 +14,6 @@ export const BugButton = ({ className }: IBugButton) => {
     if (error) throw new Error();
   }, [error]);
 
+  // eslint-disable-next-line i18next/no-literal-string
   return <Button onClick={onThrow}>Throw error</Button>;
 };
