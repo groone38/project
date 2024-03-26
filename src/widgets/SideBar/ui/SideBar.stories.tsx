@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { SideBar } from "./SideBar";
+import type { Meta, StoryObj } from '@storybook/react';
+import { SideBar } from './SideBar';
 
 const meta = {
-  title: "widgets/SideBar",
+  title: 'widgets/SideBar',
   component: SideBar,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   //   argTypes: {
   //     backgroundColor: { control: "color" },
   //   },
