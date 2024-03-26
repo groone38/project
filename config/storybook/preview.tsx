@@ -1,5 +1,6 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
+import { BrowserRouter } from "react-router-dom";
 
 const preview: Preview = {
   parameters: {
@@ -12,9 +13,11 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => (
-      <div className="app light" style={{width: '700px'}}>
-        <Story />
-      </div>
+      <BrowserRouter>
+        <div className="app light" style={{ width: "700px" }}>
+          <Story />
+        </div>
+      </BrowserRouter>
     ),
   ],
 };
