@@ -4,9 +4,10 @@ import { Button, ThemeButton } from '../Button/Button';
 
 interface ILangSwitcher {
   className?: string;
+  short?: boolean;
 }
 
-export const LangSwitcher = ({ className }: ILangSwitcher) => {
+export const LangSwitcher = ({ className, short }: ILangSwitcher) => {
   const { t, i18n } = useTranslation();
   const toggle = () => {
     i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
@@ -17,7 +18,7 @@ export const LangSwitcher = ({ className }: ILangSwitcher) => {
       theme={ThemeButton.CLEAR}
       onClick={toggle}
     >
-      {t('Перевод')}
+      {t(short ? 'Язык' : 'Короткий язык')}
     </Button>
   );
 };
