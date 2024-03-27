@@ -9,6 +9,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:i18next/recommended",
     "plugin:storybook/recommended",
+    "plugin:react-hooks/recommended",
   ],
   overrides: [
     {
@@ -26,11 +27,13 @@ module.exports = {
     sourceType: "module",
     project: "./tsconfig.json",
   },
-  plugins: ["react", "i18next"],
+  plugins: ["react", "i18next", "react-hooks"],
   rules: {
     // "react/jsx-indent": [2, 4],
     // "react/jsx-indent-props": [2, 6],
     // indent: [2, 4],
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
     "i18next/no-literal-string": ["error", { markupOnly: true }],
     "react/jsx-filename-extension": [
       2,
@@ -53,7 +56,7 @@ module.exports = {
   globals: { __IS_DEV__: true },
   overrides: [
     {
-      files: ["**/src/**/*.test.{ts,tsx}"],
+      files: ["**/src/**/*.{test,stories}.{ts,tsx}"],
       rules: {
         "i18next/no-literal-string": ["warn"],
       },
