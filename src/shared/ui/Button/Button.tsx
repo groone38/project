@@ -36,7 +36,7 @@ export const Button = ({
     [cls.square]: square,
     [cls[size]]: true,
   };
-  console.log(mods);
+
   return (
     <button
       className={classNames(cls.Button, mods, [className, cls[theme]])}
