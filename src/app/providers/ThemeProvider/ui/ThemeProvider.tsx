@@ -4,6 +4,7 @@ import {
   ThemeContext,
 } from 'app/providers/ThemeProvider/lib/ThemeContext';
 import { ReactNode, useMemo, useState } from 'react';
+import '../../../styles/index.scss';
 
 interface IThemeProvider {
   children: ReactNode;

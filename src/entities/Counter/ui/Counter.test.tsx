@@ -7,20 +7,29 @@ import { Counter } from './Counter';
 describe('Counter', () => {
   test('with only params', () => {
     componentRender(<Counter />, {
-      intialState: { counter: { value: 10 } },
+      intialState: {
+        counter: { value: 10 },
+        user: undefined,
+      },
     });
     expect(screen.getByTestId('value-title')).toHaveTextContent('10');
   });
   test('increment', () => {
     componentRender(<Counter />, {
-      intialState: { counter: { value: 10 } },
+      intialState: {
+        counter: { value: 10 },
+        user: undefined,
+      },
     });
     fireEvent.click(screen.getByTestId('increment-button'));
     expect(screen.getByTestId('value-title')).toHaveTextContent('11');
   });
   test('decrement', () => {
     componentRender(<Counter />, {
-      intialState: { counter: { value: 10 } },
+      intialState: {
+        counter: { value: 10 },
+        user: undefined,
+      },
     });
     fireEvent.click(screen.getByTestId('decrement-button'));
     expect(screen.getByTestId('value-title')).toHaveTextContent('9');

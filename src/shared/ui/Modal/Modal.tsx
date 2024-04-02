@@ -2,6 +2,7 @@ import { MouseEvent, ReactNode, useCallback, useEffect } from 'react';
 import cls from './Modal.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Portal } from '../Portal/Portal';
+import { useTheme } from 'app/providers/ThemeProvider';
 
 interface IModal {
   className?: string;
@@ -11,6 +12,8 @@ interface IModal {
 }
 
 export const Modal = ({ className, children, isOpen, onClose }: IModal) => {
+  const { theme } = useTheme();
+
   const closeHandler = useCallback(() => {
     if (onClose) {
       onClose();
@@ -41,7 +44,7 @@ export const Modal = ({ className, children, isOpen, onClose }: IModal) => {
 
   return (
     <Portal>
-      <div className={classNames(cls.Modal, mods, [className])}>
+      <div className={classNames(cls.Modal, mods, [className, theme])}>
         <div className={cls.overlay} onClick={closeHandler}>
           <div className={cls.content} onClick={onContentClick}>
             {children}
