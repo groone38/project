@@ -22,6 +22,7 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ThemeButton;
   square?: boolean;
   size?: SizeButton;
+  disabled?: boolean;
 }
 
 export const Button = ({
@@ -29,17 +30,20 @@ export const Button = ({
   children,
   theme,
   square,
+  disabled,
   size = SizeButton.M,
   ...other
 }: IButton) => {
   const mods = {
     [cls.square]: square,
     [cls[size]]: true,
+    [cls.disabled]: disabled,
   };
 
   return (
     <button
       className={classNames(cls.Button, mods, [className, cls[theme]])}
+      disabled={disabled}
       {...other}
     >
       {children}

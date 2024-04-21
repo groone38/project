@@ -32,6 +32,7 @@ module.exports = {
     // "react/jsx-indent": [2, 4],
     // "react/jsx-indent-props": [2, 6],
     // indent: [2, 4],
+    "react/prop-types": 0,
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
     "i18next/no-literal-string": ["error", { markupOnly: true }],

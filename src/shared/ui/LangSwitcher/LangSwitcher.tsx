@@ -9,9 +9,11 @@ interface ILangSwitcher {
 
 export const LangSwitcher = ({ className, short }: ILangSwitcher) => {
   const { t, i18n } = useTranslation();
+
   const toggle = () => {
     i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
   };
+
   return (
     <Button
       className={classNames('', {}, [className])}

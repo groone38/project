@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import "../../../../app/styles/index.scss";
-import { LoginForm } from "./LoginForm";
+import type { Meta, StoryObj } from '@storybook/react';
+import '../../../../app/styles/index.scss';
+import { LoginForm } from './LoginForm';
 
 const meta = {
-  title: "features/LoginForm",
+  title: 'features/LoginForm',
   component: LoginForm,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   //   argTypes: {
   //     backgroundColor: { control: "color" },
   //   },
